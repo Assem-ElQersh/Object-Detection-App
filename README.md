@@ -121,9 +121,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- TensorFlow.js team for their excellent library and pre-trained models
-- React team for the UI framework
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/Assem-ElQersh/Object-Detection-App/blob/main/LICENSE) file for details.
