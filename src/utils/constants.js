@@ -10,7 +10,7 @@ export const MODELS = [
     description: 'Fast object detection with 80 object categories',
     threshold: 0.5,        // Confidence threshold
     maxDetections: 20,     // Maximum detections to return
-    modelSize: 'lite',     // Model size variant (lite, mobilenet_v1, mobilenet_v2)
+    modelSize: 'lite_mobilenet_v2',     // Model size variant
     classes: [             // Classes that this model can detect
       'person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus',
       'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 
