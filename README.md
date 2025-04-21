@@ -46,8 +46,9 @@ object-detection-app/
 │   └── model-info.md            # Model information docs
 │
 ├── .gitignore                   # Git ignore file
+├── tailwind.config.js           # Tailwind CSS configuration
 ├── package.json                 # Project dependencies
-├── package-lock.json            # Dependency lock file
+├── package-lock.json            # Dependency lock file (generated automatically)
 ├── README.md                    # This readme file
 └── LICENSE                      # Project license
 ```
