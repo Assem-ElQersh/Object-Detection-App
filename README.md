@@ -2,7 +2,7 @@
 
 This repository contains a web-based object detection application that uses TensorFlow.js and pre-trained models to detect objects in images and video streams from webcams.
 
-## Feat#ures
+## Features
 
 - 📷 Image upload and object detection
 - 🎥 Real-time webcam object detection
