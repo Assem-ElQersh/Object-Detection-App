@@ -29,7 +29,7 @@ export const loadModel = async (modelType, options = {}) => {
       case 'cocossd':
         // Load COCO-SSD model
         model = await cocossd.load({
-          base: options.modelSize || 'lite', // 'lite', 'mobilenet_v1', 'mobilenet_v2'
+          base: options.modelSize || 'lite_mobilenet_v2', // 'lite', 'mobilenet_v1', 'mobilenet_v2'
           ...options
         });
         console.log('COCO-SSD model loaded successfully');
