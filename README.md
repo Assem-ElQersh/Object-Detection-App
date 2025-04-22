@@ -8,7 +8,7 @@ This repository contains a web-based object detection application that uses Tens
 
 - 📷 Image upload and object detection
 - 🎥 Real-time webcam object detection
-- 🔍 Support for multiple pre-trained models (COCO-SSD, YOLO)
+- 🔍 Support for multiple pre-trained models (COCO-SSD, BlazeFace)
 - 📊 Detection results visualization with bounding boxes
 - 📱 Responsive design for desktop and mobile devices
 

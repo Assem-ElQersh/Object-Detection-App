@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import ModelSelector from './ModelSelector';
-import ImageUploader from './ImageUploader';
-import WebcamCapture from './WebcamCapture';
-import DetectionView from './DetectionView';
-import ResultsPanel from './ResultsPanel';
+import React, { useEffect, useRef, useState } from 'react'; // Added useRef import
 import { loadModel } from '../services/modelLoader';
 import { MODELS } from '../utils/constants';
+import DetectionView from './DetectionView';
+import ImageUploader from './ImageUploader';
+import ModelSelector from './ModelSelector';
+import ResultsPanel from './ResultsPanel';
 
 function App() {
   const [selectedModel, setSelectedModel] = useState(MODELS[0]);
   const [model, setModel] = useState(null);
+  const modelRef = useRef(null); // Ref to track current model
   const [isModelLoading, setIsModelLoading] = useState(true);
   const [image, setImage] = useState(null);
   const [predictions, setPredictions] = useState([]);
@@ -17,12 +17,24 @@ function App() {
   const [isDetecting, setIsDetecting] = useState(false);
   const [error, setError] = useState(null);
 
+  // Update ref when model changes
+  useEffect(() => {
+    modelRef.current = model;
+  }, [model]);
+
   // Load model on component mount or model change
   useEffect(() => {
     async function initializeModel() {
       try {
         setIsModelLoading(true);
         setError(null);
+        
+        // Dispose previous model if exists
+        if (modelRef.current) {
+          modelRef.current.dispose();
+          setModel(null);
+        }
+
         const loadedModel = await loadModel(selectedModel.type);
         setModel(loadedModel);
         setIsModelLoading(false);
@@ -37,7 +49,11 @@ function App() {
 
     // Cleanup function
     return () => {
-      // Cleanup resources if needed
+      // Dispose model when component unmounts or model changes
+      if (modelRef.current) {
+        modelRef.current.dispose();
+        setModel(null);
+      }
     };
   }, [selectedModel]);
 

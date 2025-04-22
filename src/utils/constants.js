@@ -75,7 +75,7 @@ export const WEBCAM_RESOLUTIONS = {
 // File upload constraints
 export const FILE_UPLOAD_CONSTRAINTS = {
   maxSizeMB: 10,
-  acceptedTypes: 'image/jpeg, image/png, image/gif, image/webp'
+  acceptedTypes: 'image/jpeg,image/png,image/gif,image/webp'
 };
 
 // Application theme colors

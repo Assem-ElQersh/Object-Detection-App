@@ -13,7 +13,7 @@ const ImageUploader = ({ onImageUpload, disabled }) => {
     }
     
     // Check file type
-    const validTypes = FILE_UPLOAD_CONSTRAINTS.acceptedTypes.split(', ');
+    const validTypes = FILE_UPLOAD_CONSTRAINTS.acceptedTypes.split(',').map(type => type.trim());
     if (!validTypes.includes(file.type)) {
       setError('Please select a valid image file (JPEG, PNG, GIF, or WebP)');
       fileInputRef.current.value = '';
