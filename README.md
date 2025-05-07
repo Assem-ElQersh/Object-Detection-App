@@ -2,6 +2,8 @@
 
 This repository contains a web-based object detection application that uses TensorFlow.js and pre-trained models to detect objects in images and video streams from webcams.
 
+### Check the improved version right [here](https://github.com/Assem-ElQersh/Object-Detection-App-2)
+
 ## Features
 
 - 📷 Image upload and object detection
